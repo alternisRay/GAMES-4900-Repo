@@ -1,3 +1,5 @@
-2026/01/29-23:00:06.451 188 Reusing MANIFEST C:\Users\Ray\OneDrive\Desktop\GAMES-4900-Repo\Unreal\Saved\webcache_6613\Default\Site Characteristics Database/MANIFEST-000001
-2026/01/29-23:00:06.452 188 Recovering log #3
-2026/01/29-23:00:06.453 188 Reusing old log C:\Users\Ray\OneDrive\Desktop\GAMES-4900-Repo\Unreal\Saved\webcache_6613\Default\Site Characteristics Database/000003.log 
+2026/02/01-12:05:40.535 6a14 Log #3: 7 ops saved to Table #4 OK
+2026/02/01-12:05:40.537 6a14 Archiving C:\Users\Ray\OneDrive\Desktop\GAMES-4900-Repo\Unreal\Saved\webcache_6613\Default\Site Characteristics Database/000003.log: OK
+2026/02/01-12:05:40.538 6a14 Table #4: 7 entries OK
+2026/02/01-12:05:40.539 6a14 Archiving C:\Users\Ray\OneDrive\Desktop\GAMES-4900-Repo\Unreal\Saved\webcache_6613\Default\Site Characteristics Database/MANIFEST-000001: OK
+2026/02/01-12:05:40.572 6a14 **** Repaired leveldb C:\Users\Ray\OneDrive\Desktop\GAMES-4900-Repo\Unreal\Saved\webcache_6613\Default\Site Characteristics Database; recovered 1 files; 253 bytes. Some data may have been lost. ****
