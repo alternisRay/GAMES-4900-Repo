@@ -15,13 +15,20 @@
 transform = Transform3D(2.2528858, 0, 0, 0, 2.2528858, 0, 0, 0, 2.2528858, 0, 0, 0)
 mesh = SubResource("PlaneMesh_2yvte")
 
-[node name="Caller" type="MeshInstance3D" parent="." unique_id=955327732]
+[node name="Caller" type="MeshInstance3D" parent="." unique_id=955327732 node_paths=PackedStringArray("receiver")]
 transform = Transform3D(0.512, 0, 0, 0, 0.512, 0, 0, 0, 0.512, -0.8076061, 0, 0)
 mesh = SubResource("PrismMesh_dhcmv")
 skeleton = NodePath("../Floor")
 script = ExtResource("1_lxav1")
+receiver = NodePath("../Receiver")
 
 [node name="Receiver" type="MeshInstance3D" parent="." unique_id=2053385973]
 transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 0.7352329, 0, 0)
 mesh = SubResource("SphereMesh_xa4l8")
 script = ExtResource("2_45onv")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1214697902]
+transform = Transform3D(1, 0, 0, 0, 0.97522664, 0.2212081, 0, -0.2212081, 0.97522664, -0.0068421364, 0.6110668, 1.4959056)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1844853936]
+transform = Transform3D(1, 0, 0, 0, -0.06181509, 0.99808764, 0, -0.99808764, -0.06181509, 0, 1.433877, 0)
