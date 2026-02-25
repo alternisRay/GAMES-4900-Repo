@@ -1,7 +1,0 @@
-## EngineComparison.md
-
-The process of importing Kenney assets was largely similar across Unity, Unreal, and Godot, as all three engines allow for straightforward drag-and-drop asset importing or a specific import function in the editor and automatic organization within their respective content browsers. One key similarity I noticed while building the level was how each engine supports rapid level assembly through reusable assets and in-editor manipulation tools. A major difference, however, was the editor navigation and hotkey schemes. Unity and Unreal felt familiar due to their shared use of Alt + mouse controls for camera movement, while Godot relies more heavily on Shift and the middle mouse button, which made maneuvering the editor feel less intuitive to me. Asset duplication also differed slightly: Unity and Godot use Ctrl + D, whereas Unreal allows duplication by holding Alt and dragging an object. Godot's overall layout and file handling felt more like traditional file management software compared to the other two engines.
-
-In terms of instancing, Unity's Prefabs, Unreal's Blueprint Actors, and Godot's PackedScenes all serve the same core purpose: creating reusable, instanced game objects. Prefabs and Blueprints felt very similar in practice, while PackedScenes felt conceptually different and less intuitive to me, likely due to my limited experience with Godot.
-
-If I had to rebuild the same level again, I would choose Unreal because its built-in tools and workflows make level creation and testing feel faster and more streamlined.
