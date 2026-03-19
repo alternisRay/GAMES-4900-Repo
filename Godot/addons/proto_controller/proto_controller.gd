@@ -43,11 +43,14 @@ extends CharacterBody3D
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+## Name of Input Action to Attack.
+@export var input_attack : String = "attack"
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
+var attack_held : bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -76,6 +79,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			disable_freefly()
 
+func _process(_delta: float) -> void:
+	# Attack input
+	if Input.is_action_just_pressed(input_attack):
+		attack_held = true
+		print("Attack!!")
+	if Input.is_action_just_released(input_attack):
+		attack_held = false
+		print("Attack Released")
+	if attack_held:
+		print("Attack Held")
+
 func _physics_process(delta: float) -> void:
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
@@ -97,7 +111,7 @@ func _physics_process(delta: float) -> void:
 
 	# Modify speed based on sprinting
 	if can_sprint and Input.is_action_pressed(input_sprint):
-			move_speed = sprint_speed
+		move_speed = sprint_speed
 	else:
 		move_speed = base_speed
 
@@ -120,8 +134,6 @@ func _physics_process(delta: float) -> void:
 
 
 ## Rotate us to look around.
-## Base of controller rotates around y (left/right). Head rotates around x (up/down).
-## Modifies look_rotation based on rot_input, then resets basis and rotates by look_rotation.
 func rotate_look(rot_input : Vector2):
 	look_rotation.x -= rot_input.y * look_speed
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
@@ -152,8 +164,6 @@ func release_mouse():
 	mouse_captured = false
 
 
-## Checks if some Input Actions haven't been created.
-## Disables functionality accordingly.
 func check_input_mappings():
 	if can_move and not InputMap.has_action(input_left):
 		push_error("Movement disabled. No InputAction found for input_left: " + input_left)

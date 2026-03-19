@@ -33,7 +33,7 @@ public class NewInputSystem : MonoBehaviour
 
     private void Update()
     {
-        if (attackHeld) Debug.Log("ATTACK HELD");
+        //if (attackHeld) Debug.Log("ATTACK HELD");
 
         Vector2 move = input.Player.Move.ReadValue<Vector2>();
         if (move != Vector2.zero)
@@ -44,12 +44,12 @@ public class NewInputSystem : MonoBehaviour
 
 
 
-    private void AttackPressed(InputAction.CallbackContext _) => Debug.Log("ATTACK PRESSED");
+    private void AttackPressed(InputAction.CallbackContext _) => Debug.Log("Attack!!");
 
     private void AttackReleased(InputAction.CallbackContext _)
     {
         attackHeld = false;
-        Debug.Log("ATTACK RELEASED");
+       // Debug.Log("ATTACK RELEASED");
     }
 
 
